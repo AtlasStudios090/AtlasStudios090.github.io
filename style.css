@@ -1,51 +1,87 @@
 /* Estilos generales */
 body {
-    font-family: sans-serif;
+    font-family: 'Neue Helvetica', sans-serif; /* Fuente Neue Helvetica */
     margin: 0;
     padding: 0;
     background-color: black; /* Fondo negro */
-    color: white; /* Texto blanco */
+    color: white;
 }
 
 /* Cabecera */
 header {
-    background-color: rgba(255, 255, 255, 0.2); /* Contorno blanco */
-    position: fixed; /* Barra fija */
+    background-color: transparent;
+    padding: 20px;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100; /* Asegura que esté por encima de otros elementos */
-    padding: 20px; /* Aumenta el tamaño del contorno */
+    z-index: 100;
 }
 
-nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
 }
 
-nav li {
-    margin: 10px;
+.menu li {
+    margin-left: 20px;
 }
 
 /* Hero */
 #hero {
-    background-image: url("imagen-de-fondo.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: black; /* Fondo negro */
     color: white;
     text-align: center;
     padding: 100px 0;
 }
 
-/* Gráfica */
-#graphic {
-    width: 300px; /* Ajusta el tamaño de la gráfica */
+.hero-content {
+    margin-bottom: 50px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#hero button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.graphic {
+    width: 300px;
     height: 200px;
-    background-color: white; /* Color de la gráfica */
-    margin: 50px auto; /* Centra la gráfica */
+    border: 2px solid white;
+    margin: 0 auto;
 }
 
 /* Características */
@@ -62,22 +98,21 @@ nav li {
     padding: 20px;
 }
 
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    margin: 0 auto 10px;
+}
+
 /* Llamada a la acción */
 #cta {
-    background-color: #333;
-    color: white;
     text-align: center;
     padding: 50px;
 }
 
 /* Pie de página */
 footer {
-    background-color: #000;
-    color: white;
     text-align: center;
     padding: 20px;
-}
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
