@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas Studios</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVG Animator Modular</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-    <div class="container">
-        
-        <!-- Header Fijo -->
-        <header>
-            <div class="logo">ATLAS STUDIOS</div>
-            <div class="logo-box"></div>
-            <div class="menu-box"></div>
-        </header>
-
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Potencia tu presencia digital con diseño web de alto impacto.</h1>
-                <div class="cta-button">CONTACTA YA</div>
-            </div>
-            <div class="hero-graphics">
-                <div class="small-box"></div>
-                <div class="large-box"></div>
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <div class="line"></div>
-            <div class="feature">Diseños modernos y atractivos que capturan la esencia de tu marca.</div>
-            <div class="feature">Experiencia de usuario optimizada para mayor engagement y conversiones.</div>
-            <div class="feature">Webs rápidas y responsivas, adaptadas a cualquier dispositivo.</div>
-            <div class="feature">Estrategias SEO integradas para que tu negocio brille en los buscadores.</div>
-        </section>
-
-        <!-- Call-to-Action Section -->
-        <section class="cta-section">
-            <div class="cta-box"></div>
-            <p class="cta-text">Transforma tu visión en una plataforma digital poderosa y efectiva. ¡Haz que tu marca deje huella en internet!</p>
-        </section>
-        
+  <div id="sidebar">
+    <input type="file" id="import-svg" accept=".svg" />
+    <div id="layers"></div>
+    <div id="controls">
+      <button id="interp-btn">Interpolar</button>
+      Pasos: <input type="number" id="interp-steps" value="1" min="1" />
     </div>
+    <button id="download-zip">Descargar ZIP</button>
+  </div>
+  <div id="canvas-container">
+    <svg id="svg-canvas"></svg>
+    <div id="timeline"></div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Dependencias -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/exporter.js"></script>
 </body>
 </html>
-
-   
