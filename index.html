@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SVG Animator Modular</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Animator</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="sidebar">
-    <input type="file" id="import-svg" accept=".svg" />
-    <div id="layers"></div>
-    <div id="controls">
-      <button id="interp-btn">Interpolar</button>
-      Pasos: <input type="number" id="interp-steps" value="1" min="1" />
+    <h2>Importar SVG</h2>
+    <input type="file" id="import-svg" accept=".svg" multiple>
+    <h2>Timeline</h2>
+    <div id="timeline"></div>
+    <div id="nav-buttons">
+      <button id="prev-btn">&lt;&lt;</button>
+      <button id="next-btn">&gt;&gt;</button>
     </div>
-    <button id="download-zip">Descargar ZIP</button>
+    <div id="actions">
+      <button id="interp-btn">Interpolar Morph</button>
+      <button id="preview-btn">Previsualizar</button>
+    </div>
   </div>
   <div id="canvas-container">
     <svg id="svg-canvas"></svg>
-    <div id="timeline"></div>
   </div>
 
   <!-- Dependencias -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+  <script src="https://unpkg.com/flubber@0.3.0/dist/flubber.min.js"></script>
+  <!-- Módulos -->
+  <script type="module" src="js/importer.js"></script>
+  <script type="module" src="js/renderer.js"></script>
+  <script type="module" src="js/controls.js"></script>
+  <script type="module" src="js/interpolator.js"></script>
   <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/exporter.js"></script>
 </body>
 </html>
